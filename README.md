@@ -13,5 +13,7 @@ These are the front-end directories and files for the Grav theme build for our s
 
 4) `git remote add origin https://github.com/thinkhumanio/thinkhuman.io`
 
-5) `git checkout .`
+5) `git fetch origin`
+
+6) `git checkout master`
 
