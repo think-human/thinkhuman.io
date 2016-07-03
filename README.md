@@ -6,7 +6,12 @@ These are the front-end directories and files for the Grav theme build for our s
 **intructions**
 
 1) download Grav + Admin and extract to your local webroot
+
 2) open console in `grav-admin/user/`
+
 3) `git init`
+
 4) `git remote add origin https://github.com/thinkhumanio/thinkhuman.io`
+
 5) `git checkout .`
+
