@@ -1,0 +1,12 @@
+email: brendan@thinkhuman.io
+fullname: 'Brendan Norris'
+title: Owner
+state: enabled
+access:
+  admin:
+    login: 'true'
+    super: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$q15bLcXTTsp136EEUH9y/ebMZPsSXZeLUWmKNjr0a9IVZYNNC6Q7C
+language: en

@@ -1,0 +1,48 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    {% include 'partials/metadata.html.twig' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+
+    {% endblock %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head%}
+</head>
+<body style="background: url('{{ url('theme://images/bg.png') }}'); background-size: cover;"id="top" class="{{ page.header.body_classes }}">
+    <div id="sb-site">
+        {% block header %}
+
+        {% endblock %}
+
+        {% block showcase %}{% endblock %}
+
+        {% block body %}
+        <section id="body" class="{{ class }}">
+            {% block content %}{% endblock %}
+        </section>
+        {% endblock %}
+
+        {% block footer %}
+
+        {% endblock %}
+    </div>
+    {% block bottom %}
+        {{ assets.js('bottom') }}
+    {% endblock %}
+</body>
+</html>
